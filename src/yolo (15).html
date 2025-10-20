@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Slide 15: Implementation Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .code-block { font-family: 'Courier New', Courier, monospace; }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-8">
+            <h1 class="text-5xl font-extrabold text-blue-800">Implementation Highlights</h1>
+        </header>
+        <div class="flex-grow flex flex-col justify-center items-center text-center">
+            <div class="w-full max-w-4xl">
+                <p class="text-3xl text-gray-700 mb-6">Modern YOLO frameworks like Ultralytics have made training and deployment incredibly simple.</p>
+                
+                <div class="code-block bg-gray-800 text-white p-6 rounded-xl text-2xl shadow-lg">
+<pre><code><span class="text-gray-400"># Train a YOLOv8n model on the COCO8 dataset for 100 epochs</span>
+yolo detect train data=coco8.yaml model=yolov8n.pt imgsz=640 epochs=100</code></pre>
+                </div>
+
+                <div class="mt-8 grid grid-cols-3 gap-6 text-xl">
+                    <div class="text-center p-4">
+                        <i class="fas fa-cogs text-blue-500 text-4xl mb-2"></i>
+                        <h3 class="font-bold">YAML Configuration</h3>
+                        <p class="text-gray-600">Dataset paths and class names are defined in a simple YAML file.</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <i class="fas fa-terminal text-blue-500 text-4xl mb-2"></i>
+                        <h3 class="font-bold">CLI Interface</h3>
+                        <p class="text-gray-600">Training, validation, and export are handled with a single command.</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <i class="fas fa-file-export text-blue-500 text-4xl mb-2"></i>
+                        <h3 class="font-bold">Easy Export</h3>
+                        <p class="text-gray-600">Models can be exported to ONNX, TensorRT, and other formats with one command.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

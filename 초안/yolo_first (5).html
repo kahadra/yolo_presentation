@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 5: Weakness of YOLOv1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); overflow: hidden; }
+        .placeholder { background-color: #e9ecef; border: 2px dashed #adb5bd; }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-8">
+            <h1 class="text-5xl font-extrabold text-blue-800">Weakness of YOLOv1</h1>
+            <div class="w-24 h-1.5 bg-blue-500 mt-3"></div>
+        </header>
+        <div class="flex-grow grid grid-cols-2 gap-12 items-center">
+            <div class="space-y-10">
+                <div class="flex items-start">
+                    <i class="fas fa-crosshairs text-red-500 text-4xl w-12 pt-1"></i>
+                    <div class="ml-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Poor Localization</h2>
+                        <p class="text-xl text-gray-600 mt-1">Struggled with precise bounding box placement compared to two-stage methods.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-search-minus text-red-500 text-4xl w-12 pt-1"></i>
+                    <div class="ml-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Difficulty with Small Objects</h2>
+                        <p class="text-xl text-gray-600 mt-1">The coarse grid made it hard to detect small objects or groups of objects clustered together.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-border-all text-red-500 text-4xl w-12 pt-1"></i>
+                    <div class="ml-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Rigid Grid Limitations</h2>
+                        <p class="text-xl text-gray-600 mt-1">Each grid cell could only predict one class, limiting detection of multiple object types in one cell.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center placeholder h-full rounded-lg">
+                <!-- 수정 요망: 작은 객체 탐지 실패 예시 이미지 URL을 아래 src에 삽입하세요 -->
+                <img src="" alt="Small object detection failure example" class="max-w-full h-auto hidden">
+                <span class="text-gray-500 text-lg text-center">Image Placeholder:<br>Small objects (e.g., birds in a flock) being missed by the detector.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

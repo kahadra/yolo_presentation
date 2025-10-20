@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9: YOLOv6 - Industrial Focus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-4">
+            <h1 class="text-5xl font-extrabold text-blue-800">YOLOv6 – Industrial Focus</h1>
+        </header>
+        <div class="flex-grow grid grid-cols-2 gap-8 items-center">
+            <div class="space-y-8 text-2xl">
+                <div class="flex items-start">
+                    <i class="fas fa-microchip text-blue-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">EfficientRep Backbone</h3>
+                        <p class="text-gray-600">Designed a hardware-efficient backbone for faster inference on various devices.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-code-branch text-blue-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Decoupled Head</h3>
+                        <p class="text-gray-600">Separated classification and regression heads, improving accuracy by resolving task conflicts.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-anchor text-blue-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Anchor-Free & Edge Optimization</h3>
+                        <p class="text-gray-600">Adopted an anchor-free approach, simplifying the pipeline and making it more suitable for edge deployment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <img src="image/fig10.png" alt="YOLOv6 vs v5 Performance" class="w-full h-auto rounded-lg border-2 border-gray-200">
+                <p class="text-center text-sm text-gray-500 -mt-2">Source: Machines (2023), Figure 10</p>
+                <img src="image/table2.png" alt="YOLOv6 Variants" class="w-full h-auto rounded-lg border-2 border-gray-200">
+                <p class="text-center text-sm text-gray-500 -mt-2">Source: Machines (2023), Table 2</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

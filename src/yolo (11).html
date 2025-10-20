@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 11: YOLOv7 - Performance Gain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-6">
+            <h1 class="text-5xl font-extrabold text-blue-800">YOLOv7 – Performance Gain</h1>
+        </header>
+        <div class="flex-grow grid grid-cols-2 gap-12 items-center">
+            <div class="flex flex-col items-center justify-center h-full">
+                <img src="image/fig12.png" alt="YOLOv7 vs others" class="max-h-full h-auto rounded-lg border-2 border-gray-200">
+                <p class="mt-2 text-center text-sm text-gray-500">Source: Machines (2023), Figure 12</p>
+            </div>
+            <div class="space-y-10 text-3xl">
+                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <p class="font-bold text-blue-800"><i class="fas fa-shipping-fast mr-3"></i>+120% Faster</p>
+                    <p class="text-gray-600 text-2xl mt-1">Significantly faster than YOLOv5 at similar accuracy levels.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg shadow-sm">
+                    <p class="font-bold text-green-800"><i class="fas fa-chart-line mr-3"></i>New SOTA mAP</p>
+                    <p class="text-gray-600 text-2xl mt-1">Achieved a new state-of-the-art mAP of ~57% on COCO.</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-sm">
+                    <p class="font-bold text-yellow-800"><i class="fas fa-bolt mr-3"></i>Efficient Training</p>
+                    <p class="text-gray-600 text-2xl mt-1">Auxiliary head and other techniques led to a more efficient training pipeline.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

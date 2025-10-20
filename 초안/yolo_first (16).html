@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Slide 16: Limitations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); overflow: hidden; }
+        .placeholder { background-color: #e9ecef; border: 2px dashed #adb5bd; }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-8">
+            <h1 class="text-5xl font-extrabold text-blue-800">Limitations & Challenges</h1>
+            <div class="w-24 h-1.5 bg-blue-500 mt-3"></div>
+        </header>
+        <div class="flex-grow grid grid-cols-2 gap-12 items-center">
+            <div class="space-y-10">
+                <div class="flex items-start">
+                    <i class="fas fa-exclamation-triangle text-red-500 text-4xl w-12 pt-1"></i>
+                    <div class="ml-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Small Object Recall</h2>
+                        <p class="text-xl text-gray-600 mt-1">Despite improvements, detecting very small or heavily occluded objects remains a significant challenge.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-balance-scale-right text-red-500 text-4xl w-12 pt-1"></i>
+                    <div class="ml-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Dataset Bias</h2>
+                        <p class="text-xl text-gray-600 mt-1">Performance is heavily dependent on the training data. Models can struggle with objects in novel orientations or environments.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-sliders-h text-red-500 text-4xl w-12 pt-1"></i>
+                    <div class="ml-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Real-time vs. Accuracy Trade-off</h2>
+                        <p class="text-xl text-gray-600 mt-1">The core challenge persists: choosing between faster, smaller models (like YOLOv8n) and more accurate, slower models (like YOLOv8x).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center placeholder h-full rounded-lg">
+                <!-- 수정 요망: 탐지 실패 예시 이미지 URL을 아래 src에 삽입하세요 -->
+                <img src="" alt="Detection failure example" class="max-w-full h-auto hidden">
+                <span class="text-gray-500 text-lg text-center">Image Placeholder:<br>Detection Failure Example (e.g., missed small object)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

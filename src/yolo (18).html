@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 17-1: Answer - Anchor-Free</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .placeholder { background-color: #e9ecef; border: 2px dashed #adb5bd; }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-6">
+            <h1 class="text-5xl font-extrabold text-blue-800">Q1: Is anchor-free always superior?</h1>
+            <div class="w-24 h-1.5 bg-blue-500 mt-3"></div>
+        </header>
+        <div class="flex-grow grid grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 text-2xl">
+                <div class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Usually, for Generalization</h3>
+                        <p class="text-gray-600">It simplifies the pipeline by removing anchor-related hyperparameters and often generalizes better to objects with diverse shapes and sizes.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-times-circle text-red-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Not Always</h3>
+                        <p class="text-gray-600">Anchor-based models can perform better if objects in a dataset have very uniform and specific aspect ratios, where hand-picked anchors provide a strong prior.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-balance-scale text-blue-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Conclusion: A Favorable Trend</h3>
+                        <p class="text-gray-600">The industry trend is towards anchor-free for its simplicity and robust performance, but the best choice can still be task-dependent.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center placeholder h-full rounded-lg">
+                <span class="text-gray-500 text-lg text-center">Image Placeholder:<br>Anchor-based vs. Anchor-free Diagram</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
