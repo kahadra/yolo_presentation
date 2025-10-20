@@ -25,12 +25,16 @@
         }
         #slide-container {
             position: relative;
-            transform-origin: top left;
+            /* 수정된 부분: transform-origin을 center로 변경 */
+            transform-origin: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        #slide-frame {
+            /* iframe의 기본 크기를 명시합니다 */
             width: 1280px;
             height: 720px;
+        }
+        #slide-frame {
+            width: 100%;
+            height: 100%;
             border: none;
         }
         #controls {
@@ -81,30 +85,13 @@
     </div>
 
     <script>
-        // 사용자의 파일명에 맞게 수정된 슬라이드 목록
         const slideFiles = [
-            "yolo (1).html",
-            "yolo (2).html",
-            "yolo (3).html",
-            "yolo (4).html",
-            "yolo (5).html",
-            "yolo (6).html",
-            "yolo (7).html",
-            "yolo (8).html",
-            "yolo (9).html",
-            "yolo (10).html",
-            "yolo (11).html",
-            "yolo (12).html",
-            "yolo (13).html",
-            "yolo (14).html",
-            "yolo (15).html",
-            "yolo (16).html",
-            "yolo (17).html",
-            "yolo (18).html", // Q&A 답변 1
-            "yolo (19).html", // Q&A 답변 2
-            "yolo (20).html", // Q&A 답변 3
-            "yolo (21).html", // Conclusion
-            "yolo (22).html"  // References
+            "yolo (1).html", "yolo (2).html", "yolo (3).html", "yolo (4).html",
+            "yolo (5).html", "yolo (6).html", "yolo (7).html", "yolo (8).html",
+            "yolo (9).html", "yolo (10).html", "yolo (11).html", "yolo (12).html",
+            "yolo (13).html", "yolo (14).html", "yolo (15).html", "yolo (16).html",
+            "yolo (17).html", "yolo (18).html", "yolo (19).html", "yolo (20).html",
+            "yolo (21).html", "yolo (22).html"
         ];
 
         const slideFrame = document.getElementById('slide-frame');
@@ -120,7 +107,6 @@
         function loadSlide(index) {
             if (index >= 0 && index < totalSlides) {
                 currentSlideIndex = index;
-                // 파일 경로는 /src/ 폴더 기준입니다.
                 slideFrame.src = `src/${slideFiles[index]}`;
                 updateCounter();
             }
@@ -130,21 +116,14 @@
             slideCounter.textContent = `${currentSlideIndex + 1} / ${totalSlides}`;
         }
 
-        function prevSlide() {
-            loadSlide(currentSlideIndex - 1);
-        }
-
-        function nextSlide() {
-            loadSlide(currentSlideIndex + 1);
-        }
+        function prevSlide() { loadSlide(currentSlideIndex - 1); }
+        function nextSlide() { loadSlide(currentSlideIndex + 1); }
 
         function toggleFullscreen() {
             if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen();
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                }
+            } else if (document.exitFullscreen) {
+                document.exitFullscreen();
             }
         }
         
@@ -155,27 +134,20 @@
             slideContainer.style.transform = `scale(${scale})`;
         }
 
-        // Event Listeners
         prevBtn.addEventListener('click', prevSlide);
         nextBtn.addEventListener('click', nextSlide);
         fullscreenBtn.addEventListener('click', toggleFullscreen);
 
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-            } else if (e.key.toLowerCase() === 'f') {
-                toggleFullscreen();
-            }
+            if (e.key === 'ArrowLeft') prevSlide();
+            else if (e.key === 'ArrowRight') nextSlide();
+            else if (e.key.toLowerCase() === 'f') toggleFullscreen();
         });
         
         window.addEventListener('resize', resizeViewer);
 
-        // Initial Load
         loadSlide(0);
         resizeViewer();
-
     </script>
 </body>
 </html>

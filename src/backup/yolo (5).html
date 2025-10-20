@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 5: YOLOv1 - Core Idea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .slide { width: 1280px; height: 720px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="slide bg-white flex flex-col p-12">
+        <header class="mb-6">
+            <h1 class="text-5xl font-extrabold text-blue-800">YOLOv1 – The Core Idea</h1>
+        </header>
+        <div class="flex-grow grid grid-cols-2 gap-10 items-center">
+            <div class="space-y-10 text-2xl">
+                <div class="flex items-start">
+                    <i class="fas fa-th-large text-blue-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Grid-Based Prediction</h3>
+                        <p class="text-gray-600">Divides image into a 7x7 grid, creating a <span class="font-semibold">7x7x30</span> output tensor for boxes and classes.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-cogs text-blue-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">End-to-End Regression</h3>
+                        <p class="text-gray-600">Treats detection as a single regression problem, directly mapping pixels to predictions.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-crosshairs text-red-500 text-3xl w-10 mt-1"></i>
+                    <div class="ml-4">
+                        <h3 class="font-bold text-gray-800">Key Weakness</h3>
+                        <p class="text-gray-600">Struggled with localization accuracy and detecting small objects due to the coarse grid.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <img src="image/fig3.png" alt="YOLOv1 Architecture" class="max-w-full h-auto rounded-lg border-2 border-gray-200">
+                <p class="mt-2 text-center text-sm text-gray-500">Source: Machines (2023), Figure 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

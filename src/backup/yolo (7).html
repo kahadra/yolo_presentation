@@ -17,22 +17,19 @@
         <header class="mb-4">
             <h1 class="text-5xl font-extrabold text-blue-800">YOLOv4 – "Bag of Freebies & Specials"</h1>
         </header>
-        <div class="flex-grow flex flex-col justify-center">
-            <!-- 수정된 부분: 이미지 컨테이너에 최대 높이(max-h)를 지정하고, 이미지가 contain 되도록 설정 -->
-            <div class="flex justify-center items-center max-h-[320px]">
-                <img src="image/fig7.png" alt="Optimization Methodologies" class="max-w-full max-h-full object-contain rounded-lg">
+        <div class="flex-grow flex flex-col">
+            <div class="flex-shrink-0">
+                <img src="image/fig7.png" alt="Optimization Methodologies" class="w-full max-w-5xl mx-auto h-auto rounded-lg">
+                <p class="mt-1 text-center text-sm text-gray-500">Source: Machines (2023), Figure 7</p>
             </div>
-            <p class="mt-1 text-center text-sm text-gray-500">Source: Machines (2023), Figure 7</p>
-            
-            <!-- 수정된 부분: 상단 마진(mt)을 조절하여 공간 확보 -->
-            <div class="mt-4 w-full grid grid-cols-3 gap-6 text-xl">
+            <div class="mt-6 w-full grid grid-cols-3 gap-6 text-xl">
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <h3 class="font-bold text-blue-700 text-2xl mb-2">Augmentation</h3>
                     <ul class="list-disc list-inside text-gray-700"><li>Mosaic / CutMix</li><li>DropBlock Regularization</li></ul>
                 </div>
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <h3 class="font-bold text-blue-700 text-2xl mb-2">Activation & Normalization</h3>
-                    <ul class="list-disc list-inside text-gray-700"><li>Mish Activation</li><li>Cross-GPU Batch Norm</li></ul>
+                    <ul class="list-disc list-inside text-gray-700"><li>Mish Activation</li><li>Cross-GPU Batch Norm (CBN)</li></ul>
                 </div>
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <h3 class="font-bold text-blue-700 text-2xl mb-2">Loss Function</h3>
