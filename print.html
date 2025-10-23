@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLO Presentation - Print Version</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .slide-wrapper {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* --- 인쇄를 위한 핵심 스타일 --- */
+        @media print {
+            body {
+                background-color: #fff; /* 인쇄 시 배경색 제거 */
+            }
+            .slide-wrapper {
+                margin: 0;
+                box-shadow: none;
+                /* 각 슬라이드가 새 페이지에서 시작하도록 강제 */
+                break-before: page; 
+                page-break-before: always; /* 이전 브라우저 호환성 */
+            }
+            /* 첫 번째 슬라이드는 페이지 나누기 안 함 */
+            .slide-wrapper:first-child {
+                break-before: auto;
+                page-break-before: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const slideFiles = [
+            "yolo (1).html", "yolo (2).html", "yolo (3).html", "yolo (4).html",
+            "yolo (5).html", "yolo (6).html", "yolo (7).html", "yolo (8).html",
+            "yolo (9).html", "yolo (10).html", "yolo (11).html", "yolo (12).html",
+            "yolo (13).html", "yolo (14).html", "yolo (15).html", "yolo (16).html",
+            "yolo (17).html", "yolo (18).html", "yolo (19).html", "yolo (20).html",
+            "yolo (21).html", "yolo (22).html"
+        ];
+
+        // 각 슬라이드 파일을 iframe으로 페이지에 추가
+        slideFiles.forEach(file => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'slide-wrapper';
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = `src/${file}`;
+            
+            wrapper.appendChild(iframe);
+            document.body.appendChild(wrapper);
+        });
+    </script>
+
+</body>
+</html>

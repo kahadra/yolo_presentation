@@ -14,38 +14,47 @@
 </head>
 <body class="bg-gray-200 flex items-center justify-center h-screen">
     <div class="slide bg-white flex flex-col p-12">
-        <header class="mb-4">
+        <header class="mb-6">
             <h1 class="text-5xl font-extrabold text-blue-800">YOLOv6 – Industrial Focus</h1>
         </header>
         <div class="flex-grow grid grid-cols-2 gap-8 items-center">
-            <div class="space-y-8 text-2xl">
+            <!-- 왼쪽 텍스트 열 -->
+            <div class="space-y-8 text-xl h-full flex flex-col justify-center">
                 <div class="flex items-start">
-                    <i class="fas fa-microchip text-blue-500 text-3xl w-10 mt-1"></i>
+                    <i class="fas fa-microchip text-blue-500 text-2xl w-8 mt-1"></i>
                     <div class="ml-4">
-                        <h3 class="font-bold text-gray-800">EfficientRep Backbone</h3>
+                        <h3 class="font-bold text-gray-800 text-2xl">EfficientRep Backbone</h3>
                         <p class="text-gray-600">Designed a hardware-efficient backbone for faster inference on various devices.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
-                    <i class="fas fa-code-branch text-blue-500 text-3xl w-10 mt-1"></i>
+                    <i class="fas fa-code-branch text-blue-500 text-2xl w-8 mt-1"></i>
                     <div class="ml-4">
-                        <h3 class="font-bold text-gray-800">Decoupled Head</h3>
+                        <h3 class="font-bold text-gray-800 text-2xl">Decoupled Head</h3>
                         <p class="text-gray-600">Separated classification and regression heads, improving accuracy by resolving task conflicts.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
-                    <i class="fas fa-anchor text-blue-500 text-3xl w-10 mt-1"></i>
+                    <i class="fas fa-anchor text-blue-500 text-2xl w-8 mt-1"></i>
                     <div class="ml-4">
-                        <h3 class="font-bold text-gray-800">Anchor-Free & Edge Optimization</h3>
-                        <p class="text-gray-600">Adopted an anchor-free approach, simplifying the pipeline and making it more suitable for edge deployment.</p>
+                        <h3 class="font-bold text-gray-800 text-2xl">Anchor-Free & Edge Optimization</h3>
+                        <p class="text-gray-600">Adopted an anchor-free approach, simplifying the pipeline for edge deployment.</p>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col space-y-4">
-                <img src="image/fig10.png" alt="YOLOv6 vs v5 Performance" class="w-full h-auto rounded-lg border-2 border-gray-200">
-                <p class="text-center text-sm text-gray-500 -mt-2">Source: Machines (2023), Figure 10</p>
-                <img src="image/table2.png" alt="YOLOv6 Variants" class="w-full h-auto rounded-lg border-2 border-gray-200">
-                <p class="text-center text-sm text-gray-500 -mt-2">Source: Machines (2023), Table 2</p>
+            
+            <!-- 오른쪽 이미지 열 (세로 배치) -->
+            <div class="flex flex-col h-full space-y-4 justify-center">
+                <!-- 이미지 1: 그래프 -->
+                <div class="flex-1 flex flex-col items-center justify-center min-h-0">
+                    <img src="image/fig10.png" alt="YOLOv6 vs v5 Performance" class="max-w-full max-h-full object-contain rounded-lg border-2 border-gray-200">
+                    <p class="mt-1 text-center text-xs text-gray-500 flex-shrink-0">Source: Machines (2023), Figure 10</p>
+                </div>
+                <!-- 이미지 2: 테이블 -->
+                <div class="flex-1 flex flex-col items-center justify-center min-h-0">
+                    <img src="image/table2.png" alt="YOLOv6 Variants" class="max-w-full max-h-full object-contain rounded-lg border-2 border-gray-200">
+                    <p class="mt-1 text-center text-xs text-gray-500 flex-shrink-0">Source: Machines (2023), Table 2</p>
+                </div>
             </div>
         </div>
     </div>

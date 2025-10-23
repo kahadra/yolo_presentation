@@ -14,39 +14,41 @@
 </head>
 <body class="bg-gray-200 flex items-center justify-center h-screen">
     <div class="slide bg-white flex flex-col p-12">
-        <header class="mb-6">
+        <header class="mb-4">
             <h1 class="text-5xl font-extrabold text-blue-800">YOLOv8 – The Next Step</h1>
         </header>
-        <div class="flex-grow grid grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 text-2xl">
+        <div class="flex-grow grid grid-cols-2 gap-10 items-center">
+            <div class="space-y-8 text-xl">
                 <div class="flex items-start">
-                    <i class="fas fa-anchor text-blue-500 text-3xl w-10 mt-1"></i>
+                    <i class="fas fa-anchor text-blue-500 text-2xl w-8 mt-1"></i>
                     <div class="ml-4">
-                        <h3 class="font-bold text-gray-800">Fully Anchor-Free</h3>
+                        <h3 class="font-bold text-gray-800 text-2xl">Fully Anchor-Free</h3>
                         <p class="text-gray-600">Completely removes the need for pre-defined anchors, simplifying the model and improving generalization.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
-                    <i class="fas fa-code-branch text-blue-500 text-3xl w-10 mt-1"></i>
+                    <i class="fas fa-code-branch text-blue-500 text-2xl w-8 mt-1"></i>
                     <div class="ml-4">
-                        <h3 class="font-bold text-gray-800">Decoupled Detection Head</h3>
+                        <h3 class="font-bold text-gray-800 text-2xl">Decoupled Detection Head</h3>
                         <p class="text-gray-600">Separates classification and regression, a proven technique for better performance.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
-                    <i class="fas fa-layer-group text-blue-500 text-3xl w-10 mt-1"></i>
+                    <i class="fas fa-layer-group text-blue-500 text-2xl w-8 mt-1"></i>
                     <div class="ml-4">
-                        <h3 class="font-bold text-gray-800">Multi-Size Models (n/s/m/l/x)</h3>
+                        <h3 class="font-bold text-gray-800 text-2xl">Multi-Size Models (n/s/m/l/x)</h3>
                         <p class="text-gray-600">Continues the successful strategy of providing scalable models for diverse hardware needs.</p>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center h-full">
-                <img src="image/fig13.png" alt="YOLOv8 Comparison" class="max-h-full h-auto rounded-lg border-2 border-gray-200">
-                <p class="mt-2 text-center text-sm text-gray-500">Source: Machines (2023), Figure 13</p>
+                <div class="flex-grow flex items-center max-h-[480px]">
+                    <img src="image/fig13.png" alt="YOLOv8 Comparison" class="max-h-full w-auto object-contain rounded-lg border-2 border-gray-200">
+                </div>
+                <p class="mt-1 text-center text-xs text-gray-500">Source: Machines (2023), Figure 13</p>
             </div>
         </div>
-        <footer class="text-center mt-4">
+        <footer class="text-center mt-2">
             <p class="text-2xl font-semibold text-gray-700">"A new state-of-the-art balance between speed and precision is achieved."</p>
         </footer>
     </div>
